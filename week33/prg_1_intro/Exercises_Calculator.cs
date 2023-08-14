@@ -9,6 +9,7 @@ however I wanted to do you a service by putting the test right next to the metho
 This way you can just click the arrow in your IDE to run test + look at the test code if you're curious
 */
 
+using Microsoft.VisualBasic.CompilerServices;
 using NUnit.Framework;
 
 namespace gettingstarted;
@@ -17,7 +18,7 @@ public class Level_1_Calculator : ICalculator
 {
     public int Add(int a, int b)
     {
-        throw new NotImplementedException();
+        return a + b;
     }
 
     [Test]
@@ -29,42 +30,51 @@ public class Level_1_Calculator : ICalculator
 
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
 
     public int Divide(int a, int b)
     {
-        throw new NotImplementedException();
+        if (b != 0)
+        {
+            return a / b;
+        }
+
+        throw new DivideByZeroException();
     }
 
     public double Sqrt(int a)
     {
-        throw new NotImplementedException();
+        if (a < 0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+        return double.Sqrt(a);
     }
 
     public double Power(int a, int b)
     {
-        throw new NotImplementedException();
+        return Math.Pow(a,b);
     }
 
     public int Modulus(int a, int b)
     {
-        throw new NotImplementedException();
+        return a % b;
     }
 
     public int Negate(int a)
     {
-        throw new NotImplementedException();
+        return (int) decimal.Negate(a);
     }
 
     public int Abs(int a)
     {
-        throw new NotImplementedException();
+        return Math.Abs(a);
     }
 
 }
