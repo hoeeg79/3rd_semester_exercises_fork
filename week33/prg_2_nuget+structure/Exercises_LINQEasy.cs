@@ -15,30 +15,58 @@ public class EasyLinqExercises : IEasyLinqExercises
     // Exercise 1: Return all odd numbers from the given list.
     public List<int> GetAllOddNumbers(List<int> numbers)
     {
-        throw new NotImplementedException();
+        return numbers.FindAll(int.IsOddInteger);
     }
 
     // Exercise 2: Return the average of all numbers from the given list.
     public double GetAverage(List<int> numbers)
     {
-        throw new NotImplementedException();
+        return numbers.Average();
     }
 
     // Exercise 3: Return the first 3 numbers from the given list.
     public List<int> GetFirstThreeNumbers(List<int> numbers)
     {
-        throw new NotImplementedException();
+        // Long way
+        /* 
+        List<int> output = new List<int>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            int n = numbers[i];
+            
+            output.Add(n);
+        }
+        
+        return output;
+        */
+        
+        // Faster way
+        return numbers.Slice(0, 3);
     }
 
     // Exercise 4: Return the last number from the given list.
     public int GetLastNumber(List<int> numbers)
     {
-        throw new NotImplementedException();
+        return numbers.Last();
     }
 
     // Exercise 5: Return the string "Hello, [name]!" for each name in the given list.
     public List<string> GetHelloMessages(List<string> names)
     {
+        // Without LINQ expression:
+        /*
+        List<string> output = new List<string>();
+
+        foreach (var s in names) {
+            output.Add("Hello, " + s);
+        }
+
+        return output;
+        */
+        
+        // LINQ:
+
         throw new NotImplementedException();
     }
 
