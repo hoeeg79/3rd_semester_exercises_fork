@@ -50,11 +50,10 @@ public class Level_1_Calculator : ICalculator
 
     public double Sqrt(int a)
     {
-        if (a < 0)
-        {
+        if (a < 0) {
             throw new ArgumentOutOfRangeException();
         }
-        return double.Sqrt(a);
+        return Math.Sqrt(a);
     }
 
     public double Power(int a, int b)
@@ -64,12 +63,16 @@ public class Level_1_Calculator : ICalculator
 
     public int Modulus(int a, int b)
     {
+        if (b == 0) {
+            throw new DivideByZeroException("Can't divide by zero");
+        }
+        
         return a % b;
     }
 
     public int Negate(int a)
     {
-        return (int) decimal.Negate(a);
+        return -a;
     }
 
     public int Abs(int a)
