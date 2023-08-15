@@ -85,13 +85,22 @@ public class MediumLinqExercises : IMediumLinqExercises
 
     public Dictionary<string, int> GetWordFrequencies(string text)
     {
-        var s = text.Split(' ').;
-        s
+        var dict = new Dictionary<string, int>();
+        var words = text.Split(' ').ToList();
+        var uniques = GetDistinctWords(text);
+        
+        foreach (var unique in uniques)
+        {
+            var s = from w in words where w.Equals(unique) select w;
+            dict.Add(unique, s.Count());
+        }
+
+        return dict;
     }
 
     public string GetLongestString(List<string> strings)
     {
-        throw new NotImplementedException();
+        return strings.OrderBy(s => s.Length).Reverse().ToList()[0];
     }
 }
 
