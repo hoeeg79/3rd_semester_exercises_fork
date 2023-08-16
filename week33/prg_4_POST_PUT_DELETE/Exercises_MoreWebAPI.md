@@ -40,6 +40,16 @@ What data can you see about the HTTP request you sent from the Swagger page?
 
 **Learning objective:** You must be able to use a tool like Postman to analyze HTTP requests and responses - and a relevant step is learning to import an HTTP request.
 
+## Guided solutions for the rest of the exercises can be found in https://github.com/uldahlalex/dotnetwebapi in file Controllers/Day2Solutions
+
+### Send a string
+
+**Task:** Send string as raw text inside of a request body. Return this string as the response body. You can optionally use [FromBody]string myString for parameter binding.
+
+**Success criteria:** You should see the same body response
+
+**Learning objective**: You must be able to add a raw text body and parameter bind this as a string
+
 
 ### Construct a Custom POST Endpoint
 
@@ -80,19 +90,10 @@ What data can you see about the HTTP request you sent from the Swagger page?
 **Task:** Annotate a controller class with the [ApiController] attribute.
 Return a "Bad request" response to a client by throwing an exception.
 
-**Success criteria:** You should get a 400 status code (Bad request).
+**Success criteria:** You should get a status code indicating an error
 
 **Learning objective**: You should be able to make use of the [ApiController] attribute in order to send appropriate responses to the requester.
 
----
-
-### Make custom data annotations
-
-**Task:** Make data annotations for a request DTO class. Now make a request that will make the data validators fail while using [ApiController].
-
-**Success criteria:** A request that you expect to fail should return a 400 Bad Request status code. (without an exception being thrown)
-
-**Learning objective:** You must know how to perform server-side data validation using Data annotations and return appropriate responses based on this.
 
 ---
 

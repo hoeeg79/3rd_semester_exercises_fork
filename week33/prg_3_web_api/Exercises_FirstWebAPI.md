@@ -1,3 +1,12 @@
+
+### Guided solutions can be found here: https://github.com/uldahlalex/dotnetwebapi check Controllers/SolutionsController.cs
+
+## Important: .NET 8 uses another default layout, so i recommend cloning this repo with version 8 and controllers:
+
+```bash
+git clone https://github.com/uldahlalex/dotnetwebapi
+```
+
 ### Create and Run a Web API Using the .NET CLI 
 
 - **Task:** Use the .NET CLI to establish a new Web API. Run the program.
@@ -42,9 +51,9 @@ Bonus: Why do you think .NET Web API is capable of "automatically" adding your C
 [FromRoute] int id
 ```
 in the method parameter
-). Return the ID to the requester.
+). Return the id to the requester.
 
-**Success criteria:** When inserting ID 42 in Swagger as route segment, you should be 
+**Success criteria:** When inserting id 42 in Swagger as route segment, you should be able to get the id number response
 
 
 **Learning objective:** You must know how to read/get data from a route segment which the client passes
@@ -68,6 +77,8 @@ Return the value to the client.
 
 ### GET with header attached
 
+#### Correction: Here I meant SET a header with query params, not read
+
 **Task:** Make a GET endpoint that can read a header using:
 
 ```c#
@@ -83,6 +94,8 @@ Return the value to the client.
 ---
 
 ### Setting some custom header
+
+#### Note: You can both read/write the headers using this class:
 
 **Task:** Use the HttpContext class to set some HTTP response header in some endpoint.
 
