@@ -42,21 +42,12 @@ What data can you see about the HTTP request you sent from the Swagger page?
 
 ## Guided solutions for the rest of the exercises can be found in https://github.com/uldahlalex/dotnetwebapi in file Controllers/Day2Solutions
 
-### Send a string
-
-**Task:** Send string as raw text inside of a request body. Return this string as the response body. You can optionally use [FromBody]string myString for parameter binding.
-
-**Success criteria:** You should see the same body response
-
-**Learning objective**: You must be able to add a raw text body and parameter bind this as a string
-
 
 ### Construct a Custom POST Endpoint
 
 
-**Task:** Create a POST endpoint that takes a JSON body/payload and deserializes as a custom C# object. Return with 201 response + the same JSON as client sent.
-**Success Criteria:** Using an HTTP client (like Swagger), you should be able to send JSON and receive a 201 response along with the same body.
-
+**Task:** Create a POST endpoint that takes a JSON body/payload and deserializes into a C# object. Return the same object.
+**Success Criteria:** Using an HTTP client (like Swagger or Postman), you should be able to send JSON and receive it again.
 **Learning objective:** You must know to make a POST endpoint that takes a custom DTO in the payload.
 
 ---
@@ -99,6 +90,8 @@ Return a "Bad request" response to a client by throwing an exception.
 
 
 ### Make a CRUD web API with in-memory database
+
+Please be patient with this exercises - it may require some time. I have deliberately not created a guided solution for this one.
 
 **Task:** Now that you know the basics of making API's, make a Web API which performs basic CRUD operations (without a database - just keep the data in memory).
 
