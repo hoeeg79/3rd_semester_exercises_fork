@@ -47,7 +47,9 @@ What data can you see about the HTTP request you sent from the Swagger page?
 
 
 **Task:** Create a POST endpoint that takes a JSON body/payload and deserializes into a C# object. Return the same object.
+
 **Success Criteria:** Using an HTTP client (like Swagger or Postman), you should be able to send JSON and receive it again.
+
 **Learning objective:** You must know to make a POST endpoint that takes a custom DTO in the payload.
 
 ---
@@ -70,6 +72,7 @@ What data can you see about the HTTP request you sent from the Swagger page?
 
 
 **Task:** Request a custom DTO. The DTO must have data annotations. Return 400 if the validation rules are violated. (Use [ApiController] attribute for the controller for "automatic" validation check)
+
 **Success Criteria:** You should receive a status 400 response code when the data annotations are violated.
 
 **Learning Objective:** Perform server-side data validation of client data.
