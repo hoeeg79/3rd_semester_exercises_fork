@@ -3,6 +3,19 @@
 - Dependency Injection & service lifetimes
 - Environments and environment variables
 
+Link to example CRUD API with services and controllers: https://github.com/uldahlalex/inmemorybasiccrud
+
+
+**Info**
+- Check marketplace (where you install plugins) for Jetbrains AI Assistant
+- If you have .NET 8 and want a controller layout without cloning my repo, you can run 
+
+```c#
+dotnet new webapi --use-controllers
+```
+
+Apparently, Rider with MVC creates a bunch of other stuff, so I recommend the above command.
+
 **Recommended actions:**
 - Doing exercises for today (prioritize yesterday's exercises if you haven't completed those)
 
@@ -39,12 +52,14 @@
   <summary>Click here to expand</summary>
 
 1. Open a bash session and paste the following command and press enter:
+(check if you have the file .bash_profile in the user directory. If not, just make one. Remember the little dot in the beginning of the file name).
 
 ```bash
-echo 'export VARNEMT="value"' >> ~/.bash_profile
+echo 'export VARNAME="value"' >> ~/.bash_profile
 ```
-2. Now close down your terminal, open a new terminal, and to confirm the variable is present by writing the following command:
+Then restart your terminal (and optionally check the content of the .bash_profile file, to see if you have your variable here).
 
+2. Now close down your terminal, open a new terminal, and to confirm the variable is present by writing the following command:
 ```bash
 echo $VARNAME
 ```
