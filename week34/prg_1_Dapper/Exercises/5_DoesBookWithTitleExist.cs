@@ -14,7 +14,18 @@ public class DoesBookWithTileExistExercise
     /// <exception cref="NotImplementedException"></exception>
     public bool DoesBookWithTitleExist(string title)
     {
-        throw new NotImplementedException();
+        var sql = $@"SELECT
+                    book_id as {nameof(Book.BookId)},
+                    title as {nameof(Book.Title)},
+                    publisher as {nameof(Book.Publisher)},
+                    cover_img_url as {nameof(Book.CoverImgUrl)}
+                    FROM library.books
+                    WHERE title = @title";
+
+        using (var conn = Helper.DataSource.OpenConnection())
+        {
+            return conn.ExecuteScalar<int>(sql, new {title}) == 1;
+        }
     }
 
     [Test]
