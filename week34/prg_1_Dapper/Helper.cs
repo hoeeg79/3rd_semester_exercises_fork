@@ -72,7 +72,7 @@ public static class Helper
     {
         return new Faker<Author>()
             .RuleFor(a => a.AuthorId, id)
-            .RuleFor(a => a.Bithday, b => b.Date.Recent())
+            .RuleFor(a => a.Birthday, b => b.Date.Recent())
             .RuleFor(a => a.Name, n => n.Name.FullName())
             .RuleFor(a => a.Nationality, n => n.Lorem.Word())
             .Generate();

@@ -31,7 +31,7 @@ public class Author
     public string Name { get; set; }
     public string Nationality { get; set; }
     public int AuthorId { get; set; }
-    public DateTime Bithday { get; set; }
+    public DateTime Birthday { get; set; }
 }
 
 public class FullBookDetails
