@@ -5,6 +5,8 @@
 
 Link to example CRUD API with services and controllers: https://github.com/uldahlalex/inmemorybasiccrud
 
+Slides: https://docs.google.com/presentation/d/e/2PACX-1vS-jU979YnjJ3w8Ys-EEz9k_NP66GN1RIh8uP9__eYMG19_TI7g0fX2U0o3UNRMreOsZb2uE01f3aI7/pub?start=false&loop=false&delayms=3000
+
 
 **Info**
 - Check marketplace (where you install plugins) for Jetbrains AI Assistant
